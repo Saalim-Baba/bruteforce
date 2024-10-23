@@ -4,79 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f1f1f1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .login-container {
-            background-color: white;
-            width: 350px;
-            padding: 30px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .login-container img {
-            width: 150px;
-            text-align: left;
-        }
-
-        .login-container h2 {
-            font-size: 1.2em;
-            font-weight: normal;
-        }
-
-        .login-container label {
-            display: block;
-            text-align: left;
-            font-weight: bold;
-        }
-
-        .login-container input[type="password"] {
-            width: 100%;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #cccccc;
-            border-top: none;
-            border-right: none;
-            border-left: none;
-            outline: None;
-            box-sizing: border-box;
-        }
-
-        .button-container {
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .login-container button {
-            padding: 10px 20px;
-            background-color: #0078d4;
-            color: white;
-            border: none;
-            font-size: 0.9em;
-            cursor: pointer;
-        }
-
-        .login-container button:hover {
-            background-color: #005a9e;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <div class="login-container">
     <img src="./Microsoft_Logo.jpg" alt="Microsoft Logo">
-    <h5 style=' font-weight: normal'>saalim.baba@outlook.com</h5>
+    <h5 style='font-weight: normal'>saalim.baba@outlook.com</h5>
 
-    <form>
+    <form onsubmit="return checkPassword()">
         <label style='font-size: 1.2vw; margin-top: 10px' for="password">Kennwort eingeben</label>
         <input style='margin-top: 20px' type="password" id="password" name="password" placeholder="Kennwort">
+
+        <p id="error-message">Incorrect password, please try again!</p>
 
         <div class="button-container">
             <button type="submit">Anmelden</button>
@@ -84,5 +24,6 @@
     </form>
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>

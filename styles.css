@@ -1,89 +1,94 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f1f1;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
-
-.login-container, .signup-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+.login-container {
+    background-color: white;
+    width: 350px;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
-
-.login-form h2, .signup-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
+.login-container img {
+    width: 150px;
+    text-align: left;
 }
 
-
-.input-group {
-    margin-bottom: 15px;
+.login-container h2 {
+    font-size: 1.2em;
+    font-weight: normal;
 }
 
-.input-group label {
+.login-container label {
     display: block;
-    font-size: 14px;
-    color: #333;
+    text-align: left;
+    font-weight: bold;
 }
 
-.input-group input {
+.login-container input[type="password"],
+.login-container input[type="text"] {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #cccccc;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    outline: none;
+    box-sizing: border-box;
 }
 
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
 
-.btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
+.login-container button {
+    padding: 10px 20px;
+    background-color: #0078d4;
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    font-size: 0.9em;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-.btn:hover {
-    background-color: #45a049;
+.login-container button:hover {
+    background-color: #005a9e;
 }
 
-
-.signup-link, .login-link {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 14px;
+.change-password {
+    display: none;
+    margin-top: 20px;
 }
 
-.signup-link a, .login-link a {
-    color: #4CAF50;
-    text-decoration: none;
+.change-password h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
-.signup-link a:hover, .login-link a:hover {
+.change-password button {
+    background-color: #28a745;
+}
+
+.change-password button:hover {
+    background-color: #218838;
+}
+
+.toggle-password {
+    cursor: pointer;
+    color: #0078d4;
     text-decoration: underline;
+    margin-top: 10px;
+    display: inline-block;
 }
 
-
-.signup-form .input-group:last-of-type {
-    margin-bottom: 20px;
+#error-message {
+    color: red;
+    display: none;
 }
