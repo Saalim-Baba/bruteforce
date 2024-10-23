@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+<div class="login-container">
+    <form class="login-form" onsubmit="return validatePassword()">
+        <h2>Signup</h2>
+        <div class="input-group">
+            <label for="password">Create password</label>
+            <br>
+            <input type="password" id="password" name="password" min="8" required>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <br>
+        <p id="error-message" style="color: red; display: none;">Password doesn't match the requirements</p>
+    </form>
+</div>
+</body>
+</html>
